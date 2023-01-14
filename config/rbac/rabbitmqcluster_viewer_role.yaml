@@ -1,0 +1,20 @@
+# permissions for end users to view rabbitmqclusters.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: rabbitmqcluster-viewer-role
+rules:
+- apiGroups:
+  - queue.example.com
+  resources:
+  - rabbitmqclusters
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - queue.example.com
+  resources:
+  - rabbitmqclusters/status
+  verbs:
+  - get

@@ -37,4 +37,21 @@ rules:
       - patch
       - update
       - watch
+  ##
+  ## Rules for queue.example.com/v1alpha1, Kind: RabbitMQCluster
+  ##
+  - apiGroups:
+      - queue.example.com
+    resources:
+      - rabbitmqclusters
+      - rabbitmqclusters/status
+      - rabbitmqclusters/finalizers
+    verbs:
+      - create
+      - delete
+      - get
+      - list
+      - patch
+      - update
+      - watch
 #+kubebuilder:scaffold:rules

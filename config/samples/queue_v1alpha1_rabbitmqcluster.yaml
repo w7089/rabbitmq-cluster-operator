@@ -1,0 +1,7 @@
+apiVersion: queue.example.com/v1alpha1
+kind: RabbitMQCluster
+metadata:
+  name: rabbitmqcluster-sample
+spec:
+  # Add fields here
+  foo: bar
